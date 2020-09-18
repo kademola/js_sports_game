@@ -1,20 +1,68 @@
-.hide {
-  display: none;
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid gray;
+  width: 1200px;
+  height: 250px;
+}
+
+h1 {
+  text-align: center;
 }
 
 .left {
-  float: left;
+  border: 1px solid gray;
+  width: 350px;
+  height: 250px;
+  text-align: center;
 }
 
 .right {
-  float: right;
-}
-
-.clear {
-  clear: both;
-}
-
-#reset-container,
-h1 {
+  border: 1px solid gray;
+  width: 350px;
+  height: 250px;
   text-align: center;
+}
+
+.reset-container {
+  border: 1px solid gray;
+  width: 350px;
+  height: 250px;
+  text-align: center;
+}
+
+#teamone-shoot-button {
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+#teamtwo-shoot-button {
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+#reset-button {
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  font-size: 1.6rem;
+  padding: 10px;
 }
