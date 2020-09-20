@@ -47,6 +47,7 @@ let reset = 0;
 let resetNum = document.querySelector("#num-resets");
 let resetButton = document.querySelector("#reset-button");
 resetButton.addEventListener("click", function () {
+  // Check if both team has shoot
   if (twoNumShot === 0 || oneNumShot === 0) {
     alert("Both Team must Shoot before reset");
   } else {
