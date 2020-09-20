@@ -47,24 +47,27 @@ let reset = 0;
 let resetNum = document.querySelector("#num-resets");
 let resetButton = document.querySelector("#reset-button");
 resetButton.addEventListener("click", function () {
-  // Check who the winner is between Team 1 and Team 2
-  if (twoNumGoal > oneNumGoal) {
-    alert("Team 2 is the Winner");
-  } else if (twoNumGoal < oneNumGoal) {
-    alert("Team 1 is the Winner");
+  if (twoNumShot === 0 || oneNumShot === 0) {
+    alert("Both Team must Shoot before reset");
   } else {
-    alert("It's a Draw");
+    // Check who the winner is between Team 1 and Team 2
+    if (twoNumGoal > oneNumGoal) {
+      alert("Team 2 is the Winner");
+    } else if (twoNumGoal < oneNumGoal) {
+      alert("Team 1 is the Winner");
+    } else {
+      alert("It's a Draw");
+    }
+    // Reset the shot taken and goals
+    teamOneGoal.innerHTML = 0;
+    teamOneNumShot.innerHTML = 0;
+    teamTwoGoal.innerHTML = 0;
+    teamTwoNumShot.innerHTML = 0;
+    reset += 1;
+    resetNum.innerHTML = reset;
+    oneNumShot = 0;
+    oneNumGoal = 0;
+    twoNumShot = 0;
+    twoNumGoal = 0;
   }
-
-  // Reset the shot taken and goals
-  teamOneGoal.innerHTML = 0;
-  teamOneNumShot.innerHTML = 0;
-  teamTwoGoal.innerHTML = 0;
-  teamTwoNumShot.innerHTML = 0;
-  reset += 1;
-  resetNum.innerHTML = reset;
-  oneNumShot = 0;
-  oneNumGoal = 0;
-  twoNumShot = 0;
-  twoNumGoal = 0;
 });
